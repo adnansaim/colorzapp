@@ -23,20 +23,64 @@
         <div class="color-demo">
           <button class="generate-button">Generate Color</button>
           <div class="demo-div"></div>
+          <button class="generate-button">Save Color</button>
         </div>
         <div class="saved-colors">
-          <h2>Saved Colors</h2>
-          <div class="saved-divs"></div>
+          <h2>Saved Colors:</h2>
+          <div class="saved-divs">
+            <h3 class="no-saved-text">No saved Color</h3>
+          </div>
         </div>
       </div>
       <div class="right-container">
-        <h1>Color Details</h1>
-        <h2>Change or Copy Color</h2>
+        <h1 class="right-heading">Color Details</h1>
         <hr />
-        <div class="rgb-input"></div>
-        <div class="hex-input"></div>
+        <h2>Change or Copy Color:</h2>
+
+        <div class="input-design">
+          <p class="adjust">RGB:</p>
+          <div class="input-div">
+            <input type="text" id="rgbVal" />
+            <i class="fa-solid fa-copy"></i>
+          </div>
+        </div>
+        <div class="input-design">
+          <p class="adjust">HEX:</p>
+          <div class="input-div">
+            <input type="text" id="rgbVal" />
+            <i class="fa-solid fa-copy"></i>
+          </div>
+        </div>
+        <h2>Adjust Color:</h2>
+        <div class="color-adjust">
+          <div class="red-container">
+            <p>Red</p>
+            <div class="color-details">
+              <input type="range" min="0" max="255" id="red-range" />
+              <label class="red-value" for="red-range">255</label>
+            </div>
+          </div>
+          <div class="green-container">
+            <p>Green</p>
+            <div class="color-details">
+              <input type="range" min="0" max="255" id="green-range" />
+              <label class="green-value" for="green-range">225</label>
+            </div>
+          </div>
+          <div class="blue-container">
+            <p>Blue</p>
+            <div class="color-details">
+              <input type="range" min="0" max="255" id="blue-range" />
+              <label class="blue-value" for="blue-range">55</label>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <script
+      src="https://kit.fontawesome.com/f99514d96b.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="/script.js"></script>
   </body>
 </html>
