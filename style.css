@@ -39,6 +39,7 @@ ol[role="list"] {
 /* Set core body defaults */
 body {
   min-height: 100vh;
+  /* overflow: hidden; */
   line-height: 1.5;
 }
 
@@ -91,6 +92,35 @@ textarea:not([rows]) {
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 5ex;
+}
+/* basic colors */
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* dark mode toggle */
+.dark-toggle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 3rem;
+  right: 6rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: 0.1s all linear;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
 }
 
 /* designing CSS: */
@@ -153,7 +183,7 @@ textarea:not([rows]) {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 .generate-button {
@@ -179,10 +209,10 @@ textarea:not([rows]) {
 
 .demo-div {
   margin: 2rem;
-  width: 65%;
-  height: 300px;
+  width: 80%;
+  height: 500px;
   background-color: rgb(244, 251, 255);
-  border: 1px solid rgb(225, 225, 225);
+  border: 1px solid rgba(215, 214, 214, 0.3);
   border-radius: 40px;
 }
 .saved-colors {
@@ -201,6 +231,7 @@ textarea:not([rows]) {
   font-size: 16px;
   font-weight: 600;
   transition: 0.1s;
+  color: black !important;
   background-color: #dbdce8;
 }
 #hexVal {
@@ -248,19 +279,20 @@ input[type="text"] {
 }
 .input-div input {
   border: 1px solid #dbdce8;
-  border-radius: 5px;
+  border-radius: 8px;
   width: 100%;
   padding: 5px;
   font-size: 16px;
   color: #2a3032;
   outline: none;
 }
-.fa-solid {
+.copy-icon {
   position: absolute;
   right: 0;
   top: 0;
   box-sizing: border-box;
   height: 100%;
+  color: black;
   cursor: pointer;
   outline: none;
   border-top-right-radius: 5px;
@@ -273,7 +305,7 @@ input[type="text"] {
   background-color: #dbdce8;
 }
 
-.fa-solid:hover {
+.copy-icon:hover {
   background-color: rgb(23, 12, 22);
   color: white;
 }
@@ -291,6 +323,7 @@ input[type="text"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  background: inherit;
   width: 180px;
   margin: 10px 0;
   cursor: pointer;
@@ -375,13 +408,48 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 @keyframes copycome {
   from {
-      transform: translateY(10px);
-      opacity: 0;
+    transform: translateY(10px);
+    opacity: 0;
   }
-
 
   to {
-      transform: translateX(0px);
-      opacity: 1;
+    transform: translateX(0px);
+    opacity: 1;
   }
+}
+/* saved div */
+.saved-color {
+  /* border-radius: 10px; */
+}
+.saved-demo {
+  width: 50px;
+  height: 50px;
+  background-color: #003cff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.saved-icons {
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+
+}
+.saved-icons i {
+  text-align: center;
+  flex: 1;
+  padding: 0.2rem 0 .5rem;
+  cursor: pointer;
+  background-color: #dbdce8;
+  transition: .1s all linear;
+  color:black;
+}
+.saved-icons i:hover {
+  background-color: rgb(23, 12, 22);
+  color: white;
+}
+.fa-copy{
+  border-bottom-right-radius: 10px;
+}
+.fa-trash-can{
+  border-bottom-left-radius: 10px;
 }

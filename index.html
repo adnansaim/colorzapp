@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="dark-toggle">
+      <img
+        class="dark-button"
+        src="/assets/night-mode.png"
+        alt="Toggle Dark Mode"
+      />
+    </div>
     <h1 class="logo">
       <span class="letter">C</span>
       <span class="letter">o</span>
@@ -23,13 +30,6 @@
         <div class="color-demo">
           <button class="generate-button">Generate Color</button>
           <div class="demo-div"></div>
-          <button class="generate-button save-button">Save Color</button>
-        </div>
-        <div class="saved-colors">
-          <h2>Saved Colors:</h2>
-          <div class="saved-divs">
-            <h3 class="no-saved-text">You did not save any color!</h3>
-          </div>
         </div>
       </div>
       <div class="right-container">
@@ -41,7 +41,7 @@
           <p class="adjust">RGB:</p>
           <div class="input-div">
             <input type="text" id="rgbVal" />
-            <i class="fa-solid fa-copy"></i>
+            <i class="fa-solid fa-copy copy-icon"></i>
           </div>
         </div>
         <div class="input-design">
@@ -49,7 +49,7 @@
           <div class="input-div hex-div">
             <p class="hexHash">#</p>
             <input type="text" id="hexVal" />
-            <i class="fa-solid fa-copy"></i>
+            <i class="fa-solid fa-copy copy-icon"></i>
           </div>
         </div>
         <h2>Adjust Color:</h2>
@@ -90,6 +90,7 @@
                 max="255"
                 id="blue-range"
               />
+
               <label class="blue-value" for="blue-range">255</label>
             </div>
           </div>
