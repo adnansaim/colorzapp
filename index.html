@@ -23,12 +23,12 @@
         <div class="color-demo">
           <button class="generate-button">Generate Color</button>
           <div class="demo-div"></div>
-          <button class="generate-button">Save Color</button>
+          <button class="generate-button save-button">Save Color</button>
         </div>
         <div class="saved-colors">
           <h2>Saved Colors:</h2>
           <div class="saved-divs">
-            <h3 class="no-saved-text">No saved Color</h3>
+            <h3 class="no-saved-text">You did not save any color!</h3>
           </div>
         </div>
       </div>
@@ -46,8 +46,9 @@
         </div>
         <div class="input-design">
           <p class="adjust">HEX:</p>
-          <div class="input-div">
-            <input type="text" id="rgbVal" />
+          <div class="input-div hex-div">
+            <p class="hexHash">#</p>
+            <input type="text" id="hexVal" />
             <i class="fa-solid fa-copy"></i>
           </div>
         </div>
@@ -56,22 +57,40 @@
           <div class="red-container">
             <p>Red</p>
             <div class="color-details">
-              <input type="range" min="0" max="255" id="red-range" />
-              <label class="red-value" for="red-range">255</label>
+              <input
+                type="range"
+                value="244"
+                min="0"
+                max="255"
+                id="red-range"
+              />
+              <label class="red-value" for="red-range">244</label>
             </div>
           </div>
           <div class="green-container">
             <p>Green</p>
             <div class="color-details">
-              <input type="range" min="0" max="255" id="green-range" />
-              <label class="green-value" for="green-range">225</label>
+              <input
+                type="range"
+                value="251"
+                min="0"
+                max="255"
+                id="green-range"
+              />
+              <label class="green-value" for="green-range">251</label>
             </div>
           </div>
           <div class="blue-container">
             <p>Blue</p>
             <div class="color-details">
-              <input type="range" min="0" max="255" id="blue-range" />
-              <label class="blue-value" for="blue-range">55</label>
+              <input
+                type="range"
+                value="255"
+                min="0"
+                max="255"
+                id="blue-range"
+              />
+              <label class="blue-value" for="blue-range">255</label>
             </div>
           </div>
         </div>

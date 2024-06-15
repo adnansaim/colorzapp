@@ -146,14 +146,14 @@ textarea:not([rows]) {
 .left-container {
   flex: 1;
   display: flex;
-  padding-top: 6rem;
+  gap: 2rem;
   flex-direction: column;
 }
 .color-demo {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 .generate-button {
@@ -181,11 +181,33 @@ textarea:not([rows]) {
   margin: 2rem;
   width: 65%;
   height: 300px;
-  border:  1px solid rgb(205, 194, 194);
+  background-color: rgb(244, 251, 255);
+  border: 1px solid rgb(225, 225, 225);
   border-radius: 40px;
 }
 .saved-colors {
-  flex-basis: 30%;
+  flex-basis: 20%;
+}
+.hexHash {
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 5px 5px;
+  margin-top: 0 !important;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.1s;
+  background-color: #dbdce8;
+}
+#hexVal {
+  padding-left: 20px;
+}
+input[type="text"] {
+  font-family: "Poppins", sans-serif;
 }
 
 .right-container {
@@ -308,27 +330,26 @@ input[type="range"]::-webkit-slider-runnable-track {
 #blue-range::-webkit-slider-runnable-track {
   background-color: rgb(44, 174, 255);
 }
-.color-details label{
+.color-details label {
   margin-left: 1rem;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 500;
 }
-.saved-colors{
+.saved-colors {
   width: 80%;
   margin: auto;
-  font-family: 'Poppins';
-  border: 1px solid gray;
+  font-family: "Poppins";
+  border: 1px solid rgb(224, 224, 224);
   padding: 1rem 2rem;
   border-radius: 30px;
-}
-.saved-colors h2{
-  font-weight: 600;
   margin-bottom: 2rem;
 }
+.saved-colors h2 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
 
-.saved-divs{
-  
-  /* height: 40%; */
+.saved-divs {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -336,6 +357,31 @@ input[type="range"]::-webkit-slider-runnable-track {
   gap: 2rem;
 }
 
-.no-saved-text{
+.no-saved-text {
   text-align: center;
+  font-weight: 500;
+}
+
+.hoverCopy {
+  position: absolute;
+  top: -50px;
+  right: -15px;
+  color: white;
+  background-color: #183154;
+  padding: 5px 12px;
+  font-weight: 400 !important;
+  border-radius: 20px;
+  animation: copycome 0.15s ease-in;
+}
+@keyframes copycome {
+  from {
+      transform: translateY(10px);
+      opacity: 0;
+  }
+
+
+  to {
+      transform: translateX(0px);
+      opacity: 1;
+  }
 }
