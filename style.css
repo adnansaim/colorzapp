@@ -214,7 +214,7 @@ body.dark-mode {
   background-color: rgb(244, 251, 255);
   border: 1px solid rgba(215, 214, 214, 0.3);
   border-radius: 40px;
-  transition: .1s all linear;
+  transition: 0.1s all linear;
 }
 .saved-colors {
   flex-basis: 20%;
@@ -430,24 +430,47 @@ input[type="range"]::-webkit-slider-runnable-track {
   border-radius: 10px;
   display: flex;
   justify-content: space-around;
-
 }
 .saved-icons i {
   text-align: center;
   flex: 1;
-  padding: 0.2rem 0 .5rem;
+  padding: 0.2rem 0 0.5rem;
   cursor: pointer;
   background-color: #dbdce8;
-  transition: .1s all linear;
-  color:black;
+  transition: 0.1s all linear;
+  color: black;
 }
 .saved-icons i:hover {
   background-color: rgb(23, 12, 22);
   color: white;
 }
-.fa-copy{
+.fa-copy {
   border-bottom-right-radius: 10px;
 }
-.fa-trash-can{
+.fa-trash-can {
   border-bottom-left-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+  .demo-div {
+    width: 80%;
+  }
+}
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .left-container{
+    margin-top: 12rem;
+  }
+  .right-container{
+    margin-top: 1rem;
+    margin: auto;
+    min-width: 80%;
+  }
+}
+@media (max-width: 475px) {
+  .dark-toggle {
+    display: none;
+  }
 }
